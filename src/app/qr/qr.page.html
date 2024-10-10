@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>qr</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">qr</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <h2>Escanea el codigo QR</h2>
+  <qrcode (qrCodeURL)="onChangeURL($event)" [qrdata]="myAngularxQrCode" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  <a [href]="qrCodeDownloadLink" download="qrcode">Download</a>
+</ion-content>
