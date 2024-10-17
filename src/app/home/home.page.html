@@ -14,7 +14,20 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-input label="Usuario" [(ngModel)]="username" type="text" placeholder="usuario@presenteprofe.cl"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input label="Contraseña" [(ngModel)]="password" type="password" placeholder="********"></ion-input>
+        </ion-item>
+
+        <!-- {{ password }} -->
+
+        <ion-button expand="full" (click)="onLogin()">LOGIN</ion-button>
+  
+      </ion-list>
+    </ion-list>
   </div>
 </ion-content>
